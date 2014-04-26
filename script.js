@@ -1,7 +1,7 @@
 $(document).on("pagebeforeshow",function(){
 
       $.ajax({
-        url:'http://83.212.100.75/ciedapp/controller.php?action=api&item=news&from=cied&num=10',
+        url:'http://server-ip/ciedapp/controller.php?action=api&item=news&from=cied&num=10',
         type: "GET"
       }).done(function(data){
         $.each(data.announces,function(i,item){
@@ -26,7 +26,7 @@ $(document).on("pagecreate",function(){
           $('div[data-role="content"] img').remove();
           $.mobile.loading( "show" );
      $.ajax({
-        url:'http://83.212.100.75/ciedapp/controller.php?action=api&item=news&from=cied&num=10',
+        url:'http://server-ip/ciedapp/controller.php?action=api&item=news&from=cied&num=10',
         type: "GET"
       }).done(function(data){
         $.each(data.announces,function(i,item){
@@ -49,7 +49,7 @@ $(document).on("pagecreate",function(){
           $('div[data-role="content"] img').remove();
           $.mobile.loading( "show" );
      $.ajax({
-        url:'http://83.212.100.75/ciedapp/controller.php?action=api&item=news&from=studcied&num=3',
+        url:'http://server-ip/ciedapp/controller.php?action=api&item=news&from=studcied&num=3',
         type: "GET"
       }).done(function(data){
         $.each(data.announces,function(i,item){
@@ -72,7 +72,7 @@ $("#programma_lesxhs").on("click",function(){
       $('div[data-role="collapsible-set"]').empty();
       $.mobile.loading( "show" );
         $.ajax({
-          url: 'http://83.212.100.75/ciedapp/controller.php?action=api&item=foodmenu',
+          url: 'http://server-ip/ciedapp/controller.php?action=api&item=foodmenu',
           type: 'GET',
           dataType: 'json',
           cache: false,
@@ -97,7 +97,7 @@ $(document).on("pagecreate",function(){
 
 
        $.ajax({
-          url: 'http://83.212.100.75/ciedapp/controller.php?action=api&item=buschedule',
+          url: 'http://server-ip/ciedapp/controller.php?action=api&item=buschedule',
           type: 'GET',
           dataType: 'json',
           cache: false,
